@@ -11,7 +11,7 @@ const bayerMatrix = [
   [15, 7, 13, 5],
 ];
 
-export const DitheredBrain = () => {
+export const LandingDithered = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
