@@ -1,10 +1,10 @@
-import { GridBackground } from "@/components/GridBackground";
-import { Navigation } from "@/components/Navigation";
-import { DotVisualization } from "@/components/DotVisualization";
+import { GridBackground } from "@/components/GridBackground"
+import { Navigation } from "@/components/Navigation"
 // import { StatsDisplay } from "@/components/StatsDisplay";
 // import { ChainLogos } from "@/components/ChainLogos";
-import { Section } from "@/components/Section";
-import { Button } from "@/components/ui/button";
+import { Section } from "@/components/Section"
+import { Button } from "@/components/ui/button"
+import { DitheredBrain } from "@/components/DitheredBrain"
 
 const Index = () => {
   return (
@@ -15,57 +15,61 @@ const Index = () => {
           <Section>
             <Navigation />
           </Section>
-          
+
           {/* Hero Section */}
           <Section withTopBorder>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-8 py-20 border-r border-border lg:border-r-0">
               {/* Left column - Content */}
               <div className="flex flex-col justify-center gap-8 lg:border-r border-border lg:pr-12">
-                <div className="text-xs font-mono text-muted-foreground tracking-wider">
-                  Layer-0 connectivity
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded w-fit bg-slate-50 dark:bg-white/5 border border-border dark:border-white/10  shadow-sm ">
+                  {/* <span className="w-1.5 h-1.5 bg-neon rounded-full animate-pulse"></span> */}
+                  <span className="font-mono text-xs text-slate-900 dark:text-muted-foreground">
+                    Layer-0 connectivity _
+                  </span>
                 </div>
-                
+
                 <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   The Coordination Layer for All Chains
                 </h1>
-                
+
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                  Fast, verifiable, and trust-minimized interoperability. Bridge assets, route intents, 
-                  and confirm proofs — without trusted relayers.
+                  Fast, verifiable, and trust-minimized interoperability. Bridge
+                  assets, route intents, and confirm proofs — without trusted
+                  relayers.
                 </p>
-                
+
                 <div className="flex gap-4">
-                  <Button variant="outline" className="border-border hover:bg-secondary">
+                  <Button
+                    variant="outline"
+                    className="border-border hover:bg-secondary"
+                  >
                     Read Docs
                   </Button>
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  <Button className="bg-[hsl(var(--neon-green))] text-black hover:bg-[hsl(var(--neon-green-dim))]">
                     Launch Demo
                   </Button>
                 </div>
-                
+
                 {/* Chain logos */}
-                <div className="mt-8">
-                  {/* <ChainLogos /> */}
-                </div>
+                <div className="mt-8">{/* <ChainLogos /> */}</div>
               </div>
-              
+
               {/* Right column - Visualization */}
               <div className="flex items-center justify-center lg:pl-12">
-                <DotVisualization />
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:30px_30px]" />
+                <DitheredBrain />
               </div>
             </div>
           </Section>
-          
+
           {/* Stats Section */}
           <Section withTopBorder>
-            <div className="px-8 py-12">
-              {/* <StatsDisplay /> */}
-            </div>
+            <div className="px-8 py-12">{/* <StatsDisplay /> */}</div>
           </Section>
         </div>
       </GridBackground>
     </div>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

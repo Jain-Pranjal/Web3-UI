@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Moon, Sun } from "lucide-react"
 
 
@@ -24,36 +25,36 @@ export const Navigation = () => {
         <h1 className="text-xl font-bold text-foreground">Jainco</h1>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-mono">
-          <a
+          <Link
             href="#protocol"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             / PROTOCOL
-          </a>
-          <a
+          </Link>
+          <Link
             href="#developers"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             / DEVELOPERS
-          </a>
-          <a
+          </Link>
+          <Link
             href="#integrations"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             / INTEGRATIONS
-          </a>
-          <a
-            href="#telemetry"
+          </Link>
+          <Link
+            href="/contact"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            / TELEMETRY
-          </a>
-          <a
+            / CONTACT
+          </Link>
+          <Link
             href="#community"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             / COMMUNITY
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -75,9 +76,11 @@ export const Navigation = () => {
           )}
         </button>
 
-        <Button variant="outline" className="border-border hover:bg-secondary">
-          Dashboard
-        </Button>
+        <Link href="/sign-up">
+          <Button variant="outline" className="border-border hover:bg-secondary">
+            Sign up
+          </Button>
+        </Link>
       </div>
     </nav>
   )
