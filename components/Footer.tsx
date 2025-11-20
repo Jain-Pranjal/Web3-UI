@@ -10,7 +10,7 @@ const FooterLinks = {
         { name: "Quick Start", href: "#" },
         { name: "API Reference", href: "#" },
         { name: "SDK", href: "#" },
-        { name: "GitHub", href: "#" },
+        { name: "GitHub", href: "https://github.com/Jain-Pranjal/Web3-UI" },
     ],
     COMMUNITY: [
         { name: "Discord", href: "#" },
@@ -52,7 +52,7 @@ export const Footer = () => {
             </div>
 
             <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-xs text-muted-foreground font-mono">© 2025 JAINCO. ALL RIGHTS RESERVED.</p>
+                <p className="text-xs text-muted-foreground font-mono">© 2025 JAINCO. By <Link href="https://pranjaljain.live/" className="hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Pranjal Jain</Link>.</p>
                 <div className="flex gap-6 text-xs text-muted-foreground font-mono">
                     <Link href="#" className="hover:text-foreground transition-colors">
                         PRIVACY
