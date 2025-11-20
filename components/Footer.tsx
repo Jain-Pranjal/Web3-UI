@@ -25,10 +25,12 @@ export const Footer = () => {
 
     return (
         <div className="px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div className="flex flex-col gap-4">
+            {/* mobile: 2 columns, md and up: 4 columns */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+                {/* make logo span full width on small screens if desired */}
+                <div className="flex flex-col gap-4 col-span-2 md:col-span-1">
                     <h3 className="text-xl font-bold text-foreground">JAINCO</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                         The coordination layer for all chains. Fast, verifiable, and trust-minimized.
                     </p>
                 </div>
@@ -58,8 +60,8 @@ export const Footer = () => {
                     <Link href="#" className="hover:text-foreground transition-colors">
                         TERMS
                     </Link>
-                    <Link href="#" className="hover:text-foreground transition-colors">
-                        STATUS
+                    <Link href="https://pranjaljain.live/" className="hover:text-foreground transition-colors">
+                        CONTACT
                     </Link>
                 </div>
             </div>

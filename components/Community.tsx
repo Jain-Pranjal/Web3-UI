@@ -19,7 +19,7 @@ export const Community = () => {
                         Join the Network
                     </h2>
 
-                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
+                    <p className="text-sm  md:text-base text-muted-foreground leading-relaxed">
                         Connect with developers, validators, and users building the future
                         of cross-chain infrastructure. Share ideas, get support, and shape the protocol.
                     </p>
