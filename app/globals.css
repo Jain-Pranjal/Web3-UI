@@ -166,6 +166,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-neon-green: hsl(var(--neon-green));
+  --color-neon-green-dim: hsl(var(--neon-green-dim));
+  --color-tech-gray: hsl(var(--tech-gray));
 }
 
 /* Light Theme (Default) */
@@ -203,7 +206,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   
-  /* Additional custom variables from React app */
+  /* Additional custom variables from React app  (they are not registered as tailwind class )*/
   --grid-line: 0 0% 12%;
   --neon-green: 75 100% 60%;
   --neon-green-dim: 75 100% 40%;
@@ -255,48 +258,19 @@
   }
 }
 
-/* React App Specific Styles from App.css */
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* so basically we can just have the custom color inside the root so that we can use that color anywhere using the var 
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+so make we dont need to make the custom utility classes in the tailwindcss we can just have the custom colors defined in the :root and use them directly like bg-[hsl(var(--neon-green))]
+*/
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
+
+
+/* We cannot be able to use the text-neon-green as we ONLY declare it as a variable not the tailwind class like the primary or destructive so we have only that custom variable but we can register that variable as the tailwind class also 
+
+
+otherwise use the variabel direclty text-[hsl(var(--neon-green))]*/
