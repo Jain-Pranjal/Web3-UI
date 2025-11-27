@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -31,7 +31,7 @@ const docSections = [
   },
 ];
 
-const docContent: Record<string, { title: string; content: JSX.Element }> = {
+const docContent: Record<string, { title: string; content: ReactNode }> = {
   introduction: {
     title: "Introduction to Axiom Zero",
     content: (
