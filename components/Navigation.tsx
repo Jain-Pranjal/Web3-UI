@@ -44,6 +44,12 @@ export const Navigation = () => {
             / INTEGRATIONS
           </Link>
           <Link
+            href="/docs"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            / DOCS
+          </Link>
+          <Link
             href="/contact"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
