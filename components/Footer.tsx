@@ -37,7 +37,7 @@ export const Footer = () => {
 
                 {sections.map(([title, links]) => (
                     <div key={title} className="flex flex-col gap-3">
-                        <h4 className="text-xs font-mono text-primary tracking-wider">{title}</h4>
+                        <h4 className="text-xs font-mono tracking-wider text-neon-green-dim dark:text-neon-green">{title}</h4>
                         {links.map((link) => (
                             <Link
                                 key={link.name}
@@ -52,7 +52,7 @@ export const Footer = () => {
             </div>
 
             <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-xs text-muted-foreground font-mono">© 2025 JAINCO. By <Link href="https://pranjaljain.live/" className="hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Pranjal Jain</Link>.</p>
+                <p className="text-xs text-muted-foreground font-mono">© 2025 JAINCO. By <Link href="https://pranjaljain.live/" className="hover:text-neon-green-dim dark:hover:text-neon-green transition-colors" target="_blank" rel="noopener noreferrer">Pranjal Jain</Link>.</p>
                 <div className="flex gap-6 text-xs text-muted-foreground font-mono">
                     <Link href="#" className="hover:text-foreground transition-colors">
                         PRIVACY
