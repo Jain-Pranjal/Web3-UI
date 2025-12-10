@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+echo "📝 Checking and formatting staged files..."
+pnpm lint-staged
+
+# Optional: verify build (uncomment if you want a pre-commit build check)
+# echo "🏗️ Checking if project builds..."
+# pnpm build
+
+echo "✅ Pre-commit checks completed!"
