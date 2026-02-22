@@ -60,7 +60,7 @@ export const Footer = () => {
                     <Link href="#" className="hover:text-foreground transition-colors">
                         TERMS
                     </Link>
-                    <Link href="https://pranjaljain.live/" className="hover:text-foreground transition-colors">
+                    <Link href="https://pranjaljain.dev/" className="hover:text-foreground transition-colors">
                         CONTACT
                     </Link>
                 </div>
